@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA'26 - Experience technology, creativity, gaming and culture at our campus festival.">
+
+    <title>NOVA'26 | Campus Fest Experience</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== 1. HEADER / NAVBAR ========== -->
+    <header class="header" id="home">
+
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                NOVA<span>'26</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#register" class="nav-register">Register</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle"
+                type="button" aria-label="Toggle color theme">
+                ☀️
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========== 2. HERO SECTION ========== -->
+        <section class="hero section" id="hero">
+
+            <div class="container hero-content">
+
+                <p class="hero-tag">✦ THE ULTIMATE CAMPUS EXPERIENCE ✦</p>
+
+                <h1>
+                    Think Beyond.<br>
+                    <span>Create The Future.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Welcome to NOVA'26 — a celebration of technology,
+                    innovation, creativity and campus culture.
+                    One campus. Countless possibilities.
+                </p>
+
+                <div class="hero-details">
+                    <p>📅 15–16 November 2026</p>
+                    <p>📍 NOVA Campus Arena</p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#events" class="btn btn-primary">
+                        Explore Events
+                    </a>
+
+                    <a href="#register" class="btn btn-secondary">
+                        Register Now
+                    </a>
+                </div>
+
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    REGISTRATIONS OPEN
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 3. ABOUT SECTION ========== -->
+        <section class="about section" id="about">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">ABOUT THE FEST</p>
+                    <h2>More Than Just An Event</h2>
+                    <p>
+                        A platform where ideas become reality
+                        and students turn creativity into experiences.
+                    </p>
+                </div>
+
+                <div class="about-content">
+
+                    <div class="about-text">
+                        <h3>Where Innovation Meets Celebration</h3>
+
+                        <p>
+                            NOVA'26 is a fictional college festival concept
+                            designed to bring students together through
+                            technology, teamwork, creativity and culture.
+                        </p>
+
+                        <p>
+                            From competitive coding to music and gaming,
+                            there is something for every curious mind.
+                            Learn new skills, meet new people and challenge
+                            yourself to think differently.
+                        </p>
+
+                        <a href="#events" class="text-link">
+                            Discover the events →
+                        </a>
+                    </div>
+
+                    <div class="about-stats">
+
+                        <div class="stat-card">
+                            <h3>05+</h3>
+                            <p>Major Events</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>02</h3>
+                            <p>Festival Days</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>01</h3>
+                            <p>Campus Experience</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>∞</h3>
+                            <p>Possibilities</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 4. EVENTS SECTION ========== -->
+        <section class="events section" id="events">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">FIND YOUR CHALLENGE</p>
+                    <h2>Explore The Events</h2>
+                    <p>
+                        Choose your arena, discover your talent
+                        and make your mark.
+                    </p>
+                </div>
+
+                <!-- Event Category Filters -->
+                <div class="event-filters" aria-label="Filter events">
+
+                    <button class="filter-btn active"
+                        type="button" data-category="all">
+                        All Events
+                    </button>
+
+                    <button class="filter-btn"
+                        type="button" data-category="technology">
+                        Technology
+                    </button>
+
+                    <button class="filter-btn"
+                        type="button" data-category="gaming">
+                        Gaming
+                    </button>
+
+                    <button class="filter-btn"
+                        type="button" data-category="culture">
+                        Culture
+                    </button>
+
+                </div>
+
+                <div class="event-grid">
+
+                    <!-- Event 1 -->
+                    <article class="event-card"
+                        data-category="technology">
+
+                        <div class="event-icon">💻</div>
+
+                        <p class="event-category">TECHNOLOGY</p>
+
+                        <h3>CodeStorm Hackathon</h3>
+
+                        <p>
+                            Build creative solutions to real-world
+                            problems through teamwork and coding.
+                        </p>
+
+                        <div class="event-info">
+                            <span>🕘 10:00 AM</span>
+                            <span>📍 Innovation Lab</span>
+                        </div>
+
+                        <a href="#register" class="event-link">
+                            Join Event →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Event 2 -->
+                    <article class="event-card"
+                        data-category="technology">
+
+                        <div class="event-icon">⚡</div>
+
+                        <p class="event-category">TECHNOLOGY</p>
+
+                        <h3>Code Battle</h3>
+
+                        <p>
+                            Test your problem-solving skills
+                            in a fast-paced programming challenge.
+                        </p>
+
+                        <div class="event-info">
+                            <span>🕘 12:00 PM</span>
+                            <span>📍 Computer Lab</span>
+                        </div>
+
+                        <a href="#register" class="event-link">
+                            Join Event →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Event 3 -->
+                    <article class="event-card"
+                        data-category="technology">
+
+                        <div class="event-icon">🤖</div>
+
+                        <p class="event-category">TECHNOLOGY</p>
+
+                        <h3>RoboQuest</h3>
+
+                        <p>
+                            Explore robotics, engineering and
+                            innovative machine-building ideas.
+                        </p>
+
+                        <div class="event-info">
+                            <span>🕘 02:00 PM</span>
+                            <span>📍 Tech Arena</span>
+                        </div>
+
+                        <a href="#register" class="event-link">
+                            Join Event →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Event 4 -->
+                    <article class="event-card"
+                        data-category="gaming">
+
+                        <div class="event-icon">🎮</div>
+
+                        <p class="event-category">GAMING</p>
+
+                        <h3>GameVerse</h3>
+
+                        <p>
+                            Bring your strategy, teamwork and
+                            competitive spirit to the gaming arena.
+                        </p>
+
+                        <div class="event-info">
+                            <span>🕘 11:00 AM</span>
+                            <span>📍 Gaming Zone</span>
+                        </div>
+
+                        <a href="#register" class="event-link">
+                            Join Event →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Event 5 -->
+                    <article class="event-card"
+                        data-category="culture">
+
+                        <div class="event-icon">🎤</div>
+
+                        <p class="event-category">CULTURE</p>
+
+                        <h3>Cultural Night</h3>
+
+                        <p>
+                            Celebrate music, dance, art and
+                            the diverse talents of our campus.
+                        </p>
+
+                        <div class="event-info">
+                            <span>🕘 06:00 PM</span>
+                            <span>📍 Main Stage</span>
+                        </div>
+
+                        <a href="#register" class="event-link">
+                            Join Event →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 5. EVENT SCHEDULE ========== -->
+        <section class="schedule section" id="schedule">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">PLAN YOUR EXPERIENCE</p>
+                    <h2>Event Schedule</h2>
+                    <p>
+                        Two days filled with ideas, challenges
+                        and unforgettable moments.
+                    </p>
+                </div>
+
+                <div class="schedule-day">
+                    <h3>Day 1 — 15 November</h3>
+
+                    <div class="schedule-list">
+
+                        <article class="schedule-item">
+                            <time>09:00 AM</time>
+                            <div>
+                                <h4>Opening Ceremony</h4>
+                                <p>Main Stage</p>
+                            </div>
+                        </article>
+
+                        <article class="schedule-item">
+                            <time>10:00 AM</time>
+                            <div>
+                                <h4>CodeStorm Hackathon</h4>
+                                <p>Innovation Lab</p>
+                            </div>
+                        </article>
+
+                        <article class="schedule-item">
+                            <time>12:00 PM</time>
+                            <div>
+                                <h4>Code Battle</h4>
+                                <p>Computer Lab</p>
+                            </div>
+                        </article>
+
+                        <article class="schedule-item">
+                            <time>02:00 PM</time>
+                            <div>
+                                <h4>RoboQuest</h4>
+                                <p>Tech Arena</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="schedule-day">
+                    <h3>Day 2 — 16 November</h3>
+
+                    <div class="schedule-list">
+
+                        <article class="schedule-item">
+                            <time>10:00 AM</time>
+                            <div>
+                                <h4>GameVerse</h4>
+                                <p>Gaming Zone</p>
+                            </div>
+                        </article>
+
+                        <article class="schedule-item">
+                            <time>02:00 PM</time>
+                            <div>
+                                <h4>Project Showcase</h4>
+                                <p>Innovation Hall</p>
+                            </div>
+                        </article>
+
+                        <article class="schedule-item">
+                            <time>04:00 PM</time>
+                            <div>
+                                <h4>Prize Distribution</h4>
+                                <p>Main Stage</p>
+                            </div>
+                        </article>
+
+                        <article class="schedule-item">
+                            <time>06:00 PM</time>
+                            <div>
+                                <h4>Cultural Night</h4>
+                                <p>Main Stage</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 6. ORGANISERS / TEAM ========== -->
+        <section class="team section" id="team">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">THE PEOPLE BEHIND NOVA</p>
+                    <h2>Meet The Team</h2>
+                    <p>
+                        A student-led team bringing ideas
+                        and experiences together.
+                    </p>
+                </div>
+
+                <div class="team-grid">
+
+                    <article class="team-card">
+                        <div class="team-avatar">👨‍💻</div>
+                        <h3>Event Coordinator</h3>
+                        <p>Event Planning & Management</p>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-avatar">🎨</div>
+                        <h3>Creative Team</h3>
+                        <p>Design & Branding</p>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-avatar">⚙️</div>
+                        <h3>Technical Team</h3>
+                        <p>Technology & Operations</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 7. SPONSORS SECTION ========== -->
+        <section class="sponsors section" id="sponsors">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">OUR PARTNERS</p>
+                    <h2>Sponsors & Partners</h2>
+                    <p>
+                        Supporting student creativity,
+                        innovation and collaboration.
+                    </p>
+                </div>
+
+                <div class="sponsor-list">
+                    <div class="sponsor-item">TECH PARTNER</div>
+                    <div class="sponsor-item">INNOVATION PARTNER</div>
+                    <div class="sponsor-item">CAMPUS PARTNER</div>
+                </div>
+
+                <p class="demo-note">
+                    Demo sponsor labels — replace with actual partners
+                    only if confirmed.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 8. REGISTRATION FORM ========== -->
+        <section class="register section" id="register">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">YOUR NOVA JOURNEY STARTS HERE</p>
+                    <h2>Register For The Fest</h2>
+                    <p>
+                        Choose your event and get ready
+                        for the campus experience.
+                    </p>
+                </div>
+
+                <form class="registration-form" id="registrationForm">
+
+                    <div class="form-group">
+                        <label for="studentName">Full Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            name="studentName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentEmail">Email Address</label>
+                        <input
+                            type="email"
+                            id="studentEmail"
+                            name="studentEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventChoice">Choose Your Event</label>
+
+                        <select id="eventChoice" name="eventChoice" required>
+                            <option value="">Select an event</option>
+                            <option value="CodeStorm Hackathon">
+                                CodeStorm Hackathon
+                            </option>
+                            <option value="Code Battle">
+                                Code Battle
+                            </option>
+                            <option value="RoboQuest">RoboQuest</option>
+                            <option value="GameVerse">GameVerse</option>
+                            <option value="Cultural Night">
+                                Cultural Night
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentMessage">
+                            Why do you want to participate? (Optional)
+                        </label>
+
+                        <textarea
+                            id="studentMessage"
+                            name="studentMessage"
+                            rows="4"
+                            placeholder="Tell us about your interest..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit Registration
+                    </button>
+
+                    <p class="form-message" id="formMessage"
+                        role="status" aria-live="polite"></p>
+
+                    <p class="demo-note">
+                        Student project demo. This form does not
+                        send or permanently store personal information.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 9. FAQ SECTION ========== -->
+        <section class="faq section" id="faq">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">GOT QUESTIONS?</p>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-list">
+
+                    <details class="faq-item">
+                        <summary>Who can participate?</summary>
+                        <p>
+                            This demo festival is designed for
+                            college students. Actual eligibility
+                            would depend on the event rules.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I participate in multiple events?</summary>
+                        <p>
+                            Check the individual event rules and
+                            schedule before selecting your events.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How do I register?</summary>
+                        <p>
+                            Complete the registration form above.
+                            This demonstration currently does not
+                            save registrations to a server.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Where will the festival take place?</summary>
+                        <p>
+                            NOVA Campus Arena is a fictional venue
+                            for this web development project.
+                        </p>
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== 10. FINAL CALL TO ACTION ========== -->
+        <section class="final-cta section">
+
+            <div class="container">
+
+                <p class="section-label">YOUR MOMENT STARTS NOW</p>
+
+                <h2>Ready To Be Part Of Something Big?</h2>
+
+                <p>
+                    Bring your ideas, meet your people
+                    and make your campus experience count.
+                </p>
+
+                <a href="#register" class="btn btn-primary">
+                    Join NOVA'26
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========== 11. FOOTER ========== -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#home" class="logo">
+                NOVA<span>'26</span>
+            </a>
+
+            <p>
+                Imagine More. Create More. Experience More.
+            </p>
+
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#events">Events</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#register">Register</a>
+                <a href="#faq">FAQs</a>
+            </div>
+
+            <p class="copyright">
+                © 2026 NOVA'26 — Student Web Development Project.
+                Fictional event concept.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
