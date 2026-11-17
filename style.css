@@ -1,0 +1,928 @@
+
+/* ==========================================
+   NOVA'26 — CAMPUS FEST EXPERIENCE
+   Complete Responsive CSS
+========================================== */
+
+/* 1. CSS Variables */
+:root {
+    --bg: #080b16;
+    --surface: #111629;
+    --surface-2: #191f36;
+    --text: #f5f7ff;
+    --muted: #a6aec5;
+    --primary: #a78bfa;
+    --secondary: #38d9ff;
+    --accent: #ff73c8;
+    --border: rgba(255, 255, 255, 0.12);
+    --gradient: linear-gradient(135deg, #a78bfa, #38d9ff);
+    --header-bg: rgba(8, 11, 22, 0.94);
+}
+
+/* 2. Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 90px 7%;
+    scroll-margin-top: 80px;
+}
+
+section h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+    margin: 12px 0 20px;
+    letter-spacing: -1px;
+}
+
+section p {
+    color: var(--muted);
+}
+
+/* 3. Navbar — Desktop Fix */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 7%;
+    background: var(--header-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    flex-shrink: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 1.7vw, 25px);
+    width: auto;
+    margin-left: auto;
+}
+
+header nav a {
+    display: inline-block;
+    flex-shrink: 0;
+    white-space: nowrap;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.25s;
+}
+
+header nav a:hover {
+    color: var(--secondary);
+}
+
+#themeToggle,
+#menuToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+    padding: 10px 13px;
+    min-height: 44px;
+}
+
+#themeToggle:hover,
+#menuToggle:hover {
+    border-color: var(--primary);
+}
+
+#menuToggle {
+    display: none;
+}
+
+/* 4. Hero Section */
+#hero {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 85% 20%,
+            rgba(112, 74, 220, 0.2),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at 10% 90%,
+            rgba(56, 217, 255, 0.12),
+            transparent 42%
+        );
+}
+
+#hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.tagline,
+#hero .tagline {
+    color: var(--secondary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#hero h1 {
+    max-width: 1000px;
+    font-size: clamp(3rem, 7.5vw, 6.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin: 25px 0;
+    animation: fadeUp 0.8s ease both;
+}
+
+#hero h1 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#hero p {
+    max-width: 750px;
+    font-size: 1.05rem;
+}
+
+#hero .hero-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+#hero .hero-details span {
+    padding: 9px 15px;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+}
+
+#hero .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+/* 5. Buttons */
+.btn,
+button[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 23px;
+    border: none;
+    border-radius: 13px;
+    background: var(--gradient);
+    color: #080b16;
+    font-weight: 800;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover,
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(56, 217, 255, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+/* 6. Status Badge */
+.badge,
+.status-badge {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 50px;
+    border: 1px solid rgba(119, 247, 188, 0.25);
+    background: rgba(119, 247, 188, 0.09);
+    color: #77f7bc;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+#hero .badge,
+#hero .status-badge {
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* 7. About Section */
+#about {
+    background: var(--surface);
+}
+
+#about .stats,
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.stat-card,
+.stat {
+    padding: 24px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.stat-card:hover,
+.stat:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.stat-card h3,
+.stat h3 {
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* 8. Events Section */
+#events {
+    background:
+        radial-gradient(
+            ellipse at 100% 0%,
+            rgba(167, 139, 250, 0.08),
+            transparent 45%
+        );
+}
+
+#events > p {
+    max-width: 700px;
+}
+
+.event-filters,
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 28px 0;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    background: var(--surface);
+    color: var(--muted);
+    transition: all 0.25s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gradient);
+    color: #080b16;
+    border-color: transparent;
+}
+
+.event-grid,
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+    animation: fadeUp 0.6s ease both;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h3 {
+    font-size: 1.3rem;
+    margin: 12px 0;
+}
+
+.event-card p {
+    margin-bottom: 12px;
+}
+
+.event-card .event-icon {
+    font-size: 2rem;
+}
+
+.event-card .event-meta {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.event-card a {
+    margin-top: 16px;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.event-card[hidden] {
+    display: none !important;
+}
+
+/* 9. Schedule */
+#schedule {
+    background: var(--surface);
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.schedule-day {
+    padding: 25px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.schedule-day h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.schedule-item,
+.schedule-row {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.schedule-item:last-child,
+.schedule-row:last-child {
+    border-bottom: none;
+}
+
+.schedule-item time,
+.schedule-row time {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* 10. Team */
+#team {
+    text-align: center;
+}
+
+.team-grid,
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.team-card {
+    padding: 30px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.team-card h3 {
+    margin: 12px 0 5px;
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: #080b16;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+/* 11. Sponsors */
+#sponsors {
+    text-align: center;
+    background: var(--surface);
+}
+
+.sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.sponsor-card {
+    min-width: 180px;
+    padding: 25px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    color: var(--muted);
+    font-weight: 800;
+}
+
+/* 12. Registration */
+#register {
+    background:
+        radial-gradient(
+            ellipse at 10% 100%,
+            rgba(56, 217, 255, 0.1),
+            transparent 45%
+        );
+}
+
+#registrationForm,
+.registration-form {
+    display: grid;
+    gap: 18px;
+    max-width: 700px;
+    margin-top: 30px;
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+}
+
+#registrationForm label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+
+#registrationForm input,
+#registrationForm select,
+#registrationForm textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: var(--bg);
+    color: var(--text);
+}
+
+#registrationForm input:focus,
+#registrationForm select:focus,
+#registrationForm textarea:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(56, 217, 255, 0.1);
+}
+
+#registrationForm select option {
+    background: var(--surface);
+}
+
+#registrationForm textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#formMessage {
+    margin-top: 12px;
+    color: var(--secondary);
+}
+
+/* 13. FAQ */
+#faq {
+    background: var(--surface);
+}
+
+#faq details,
+.faq-item {
+    margin-top: 12px;
+    padding: 20px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+#faq summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#faq details p {
+    margin-top: 12px;
+}
+
+/* 14. Call to Action */
+#cta,
+.cta {
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        rgba(167, 139, 250, 0.12),
+        rgba(56, 217, 255, 0.08)
+    );
+}
+
+#cta p,
+.cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+/* 15. Footer */
+footer {
+    padding: 30px 7%;
+    text-align: center;
+    background: #050710;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+footer a {
+    color: var(--secondary);
+}
+
+/* 16. Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(167, 139, 250, 0.12);
+    }
+
+    50% {
+        box-shadow: 0 0 28px rgba(56, 217, 255, 0.2);
+    }
+}
+
+/* 17. Light Theme */
+body.light-theme {
+    --bg: #f5f7ff;
+    --surface: #ffffff;
+    --surface-2: #edf0fa;
+    --text: #15182a;
+    --muted: #596179;
+    --primary: #6844d6;
+    --secondary: #087eaa;
+    --accent: #c02d89;
+    --border: rgba(20, 30, 60, 0.15);
+    --gradient: linear-gradient(135deg, #b9a5ff, #83e8fa);
+    --header-bg: rgba(245, 247, 255, 0.94);
+}
+
+body.light-theme footer {
+    background: #e9edf8;
+}
+
+/* 18. Tablet */
+@media (max-width: 1050px) {
+    header {
+        gap: 15px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    header nav {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 0.82rem;
+    }
+
+    .logo {
+        font-size: 1.55rem;
+    }
+
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .event-grid,
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 19. Mobile */
+@media (max-width: 700px) {
+    section {
+        padding: 65px 6%;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 6%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-right: auto;
+    }
+
+    #menuToggle {
+        display: inline-flex;
+    }
+
+    header nav {
+        display: none;
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    header nav.open {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 12px 5px;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.95rem;
+    }
+
+    #hero {
+        min-height: 75vh;
+    }
+
+    #hero h1 {
+        font-size: clamp(2.7rem, 12vw, 4.5rem);
+        letter-spacing: -2px;
+    }
+
+    #hero .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #hero .hero-buttons .btn {
+        width: 100%;
+    }
+
+    #about .stats,
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .event-grid,
+    .events-grid,
+    .team-grid,
+    .team-members,
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #registrationForm,
+    .registration-form {
+        padding: 20px;
+    }
+
+    .sponsor-card {
+        width: 100%;
+    }
+
+    .schedule-item,
+    .schedule-row {
+        grid-template-columns: 85px minmax(0, 1fr);
+        gap: 10px;
+    }
+}
+
+/* 20. Small Phones */
+@media (max-width: 380px) {
+    #about .stats,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .event-card {
+        padding: 20px;
+    }
+
+    #themeToggle,
+    #menuToggle {
+        padding: 8px 10px;
+    }
+}
+
+/* 21. Accessibility */
+:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* FINAL NAVBAR FIX */
+header {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 30px;
+    padding: 18px 7%;
+}
+
+header .logo {
+    justify-self: start;
+}
+
+header nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+    margin: 0;
+}
+
+header nav a {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+header nav a::marker {
+    content: "";
+}
+
+/* Hide bullet points if nav uses a list */
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    list-style: none;
+}
+
+#themeToggle {
+    justify-self: end;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    header {
+        grid-template-columns: 1fr auto auto;
+        gap: 10px;
+    }
+
+    header nav {
+        display: none !important;
+        grid-column: 1 / -1;
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+    }
+
+    header nav.open {
+        display: flex !important;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    header nav a {
+        padding: 10px 5px;
+    }
+
+    #menuToggle {
+        display: inline-flex;
+    }
+}
